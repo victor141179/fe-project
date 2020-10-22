@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import ArticleCard from "./ArticleCard";
 
 class ArticleList extends Component {
   state = {
@@ -18,7 +19,7 @@ class ArticleList extends Component {
     return (
       <main>
         {articles.map((article) => {
-          return <section key={article.article_id}>{article.title}</section>;
+          return <ArticleCard article={article} key={article.article_id} />;
         })}
       </main>
     );
