@@ -5,11 +5,13 @@ import NavBar from "./components/NavBar";
 import ArticleList from "./components/ArticleList";
 import { Router } from "@reach/router";
 import SingleArticle from "./components/SingleArticle";
+
 function App() {
   return (
     <div className="App">
       <Header />
       <NavBar />
+
       <Router>
         <ArticleList path="/" />
         <ArticleList path="/topics/:topic_slug" />

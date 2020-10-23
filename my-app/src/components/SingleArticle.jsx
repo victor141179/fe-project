@@ -17,11 +17,11 @@ class SingleArticle extends Component {
   }
 
   render() {
-    console.log(this.props.article_id);
     const { articleInfo } = this.state;
+    console.log(articleInfo);
     return (
       <main>
-        <h2>{articleInfo.article_title}</h2>
+        <h2>{articleInfo.title}</h2>
         <p>{articleInfo.body}</p>
         <p>{articleInfo.created_at}</p>
         <p>{articleInfo.votes} votes</p>

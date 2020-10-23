@@ -4,9 +4,11 @@ import { Link } from "@reach/router";
 const ArticleCard = (props) => {
   console.log(props);
   return (
-    <Link to={`article/${props.article_id}`}>
-      <section>{props.article_title}</section>
-    </Link>
+    <section>
+      <Link to={`/articles/${props.article.article_id}`}>
+        {props.article.title}{" "}
+      </Link>
+    </section>
   );
 };
 
