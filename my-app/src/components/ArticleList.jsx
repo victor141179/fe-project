@@ -16,7 +16,7 @@ class ArticleList extends Component {
   render() {
     const { articles } = this.state;
     const listTitle = "ALL";
-    console.log(this.props);
+
     return (
       <main>
         <h3>{listTitle} articles</h3>

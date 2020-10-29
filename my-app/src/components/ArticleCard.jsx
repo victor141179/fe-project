@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "@reach/router";
 
 const ArticleCard = (props) => {
-  console.log(props);
   return (
     <section>
       <Link to={`/articles/${props.article.article_id}`}>

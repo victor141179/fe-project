@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Comments from "./Comments";
 
 class SingleArticle extends Component {
   state = {
     articleInfo: {},
   };
   componentDidMount() {
-    console.log(this.props);
     axios
       .get(
         `https://vn-news-app.herokuapp.com/api/articles/${this.props.article_id}`
@@ -18,7 +18,7 @@ class SingleArticle extends Component {
 
   render() {
     const { articleInfo } = this.state;
-    console.log(articleInfo);
+
     return (
       <main>
         <h2>{articleInfo.title}</h2>
@@ -28,6 +28,7 @@ class SingleArticle extends Component {
         <p>{articleInfo.topic}</p>
         <p>{articleInfo.author}</p>
         <p>{articleInfo.commentCount}</p>
+        <Comments article_id={this.props.article_id} />
       </main>
     );
   }
